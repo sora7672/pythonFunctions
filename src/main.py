@@ -86,6 +86,18 @@ def calc_sum(a,b):
 
 print(calc_sum(3,2))
 
+# you can also use * for a not defined number of variables that are given
+# need to be carefully used and checked for order when having other arguments given.
+def calc_sum_mass(*nums):
+    result = 0
+    for n in nums:
+        result += n
+    return result
+
+# it will return the sum for every given number
+print(calc_sum_mass(1,4,5,7,11,52))
+
+
 # even better, you can set default values of parameters
 def book_print(bookname, author, number_pages=10):
     print(f"{bookname} by {author} with {number_pages} pages")
