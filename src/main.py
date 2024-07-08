@@ -86,7 +86,7 @@ def calc_sum(a,b):
 
 print(calc_sum(3,2))
 
-# you can also use * for a not defined number of variables that are given
+# you can also use * for a not defined number of variables(a tuple without defining the length) that are given
 # need to be carefully used and checked for order when having other arguments given.
 def calc_sum_mass(*nums):
     result = 0
@@ -97,6 +97,13 @@ def calc_sum_mass(*nums):
 # it will return the sum for every given number
 print(calc_sum_mass(1,4,5,7,11,52))
 
+# you can also add a dict in the functions parameter({"key": "value"})
+def print_book(**mydict):
+
+    for k in mydict.keys():
+        print(f"{k}: {mydict[k]}")
+
+print_book(title="My bananas!", author="John Doe", text="Hello ima loonnnnggg text")
 
 # even better, you can set default values of parameters
 def book_print(bookname, author, number_pages=10):
